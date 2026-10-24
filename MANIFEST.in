@@ -1,0 +1,5 @@
+include LICENSE NOTICE THIRD-PARTY-NOTICES.md ARCHITECTURE.md start.sh start.cmd
+recursive-include src/aletheia_core/data *.json *.md
+recursive-include src/aletheia_agora/static *.html *.css *.js
+recursive-include tests *.py
+include CHANGELOG.md RELEASE-NOTES.md VALIDATION.md
