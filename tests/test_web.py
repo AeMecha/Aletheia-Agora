@@ -59,6 +59,22 @@ class BrowserApiTests(unittest.TestCase):
         self.action("theme", "dark")
         self.assertEqual(json.loads((self.home / "settings.json").read_text())["theme"], "dark")
 
+    def test_existence_questions_use_inventory_without_a_model(self):
+        questions = ("Do I have anything in the library?",
+                     "Can you check if I have anything in the collection?")
+        for question in questions:
+            answer = self.action("ask", question).json()["value"]
+            self.assertIn("archive is empty", answer["answer"])
+            self.assertEqual(answer["search_scope"], "archive_inventory")
+        self.action("importContents", [dict(name="note.md", content="# Physical limitations\n\nA reflection on imagination and memory.")])
+        for question in questions:
+            answer = self.action("ask", question).json()["value"]
+            self.assertIn("contains 1 document", answer["answer"])
+            self.assertEqual(answer["sources"][0]["title"], "Physical limitations")
+            self.assertEqual(answer["search_scope"], "archive_inventory")
+        state = self.client.get("/api/state", headers=self.headers).json()["value"]
+        self.assertEqual(state["model"]["phase"], "stopped")
+
     def test_bad_model_upload_does_not_become_a_model(self):
         result = self.client.post("/api/model/upload", headers={**self.headers, "X-Model-Filename": "../invalid.gguf", "Content-Type": "application/octet-stream"}, content=b"not-a-gguf")
         self.assertEqual(result.status_code, 400)

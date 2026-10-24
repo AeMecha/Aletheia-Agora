@@ -43,7 +43,9 @@ function updateControls() {
     const libraryReady = state?.library.phase === 'ready';
     for (const id of ['new-chat', 'save-settings', 'reconnect', 'fetch-models', 'import-files', 'import-folder', 'refresh-library']) $(id).disabled = Boolean(busy);
     for (const button of document.querySelectorAll('.choose-model,.download-model')) button.disabled = Boolean(busy);
-    $('ask-button').disabled = Boolean(busy || !ready || !libraryReady || !$('question').value.trim());
+    // The service answers inventory questions without AI and starts a configured
+    // model only for questions that actually need document interpretation.
+    $('ask-button').disabled = Boolean(busy || !libraryReady || !$('question').value.trim());
     $('create-draft').disabled = Boolean(busy || !ready || !$('archive-input').value.trim());
     $('save-original').disabled = Boolean(busy || !libraryReady || !$('archive-input').value.trim());
     $('save-draft').disabled = Boolean(busy || !libraryReady || !$('draft-input').value.trim());
