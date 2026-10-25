@@ -9,4 +9,6 @@ This patch fixes ordinary library inventory questions in the independent FastAPI
 
 Requires Python 3.12+. Create a separate virtual environment, install `aletheia_agora-0.1.1-py3-none-any.whl` with pip, and run `aletheia-agora`. Existing users can install the wheel with `python -m pip install --upgrade ./aletheia_agora-0.1.1-py3-none-any.whl` in their application environment. Settings, models and Markdown remain in the existing profile. Keyword search works offline; local inference and optional semantic search retain their existing platform and hardware requirements. Qwen remains an optional default download; compatible GGUF and Chat Completions connections are supported.
 
-The release includes a Python wheel, source distribution and SHA-256 checksums. Python is required; Electron and Node.js are not. See README.md for setup and data locations. AGPL-3.0-only; upstream history and attribution retained.
+The release includes a Python wheel, source distribution and SHA-256 checksums. Python is required; Electron and Node.js are not. See README.md for setup and data locations. Original Aletheia covered material retains Adeptus Telvannus’s custom license; see LICENSING.md and ATTRIBUTION.md. The full contribution/dependency license texts are retained.
+
+Original project: [Aletheia](https://github.com/AdeptTel1/Aletheia) by [Adeptus Telvannus / AdeptTel1](https://github.com/AdeptTel1). Original custom terms and material changes are documented in LICENSES/, LICENSING.md and ATTRIBUTION.md.

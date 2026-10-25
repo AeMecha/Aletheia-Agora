@@ -25,3 +25,7 @@ Default Qwen is optional. Generic models use schema/JSON/prompt negotiation. pro
 ## Verification
 
 Run python -m unittest discover -s tests -v and python -m build. Tests use disposable profiles and synthetic model responses. API acceptance tests exercise the real lifespan, authentication, archive operations and vanilla static assets. CI covers Windows, Linux, macOS and Linux ARM64. Local inference and optional semantic dependencies need platform-specific validation.
+
+## Original project and license scope
+
+The upstream Archivist/Binder/Librarian workflow and covered prompts originate in [Adeptus Telvannus’s Aletheia](https://github.com/AdeptTel1/Aletheia). See ATTRIBUTION.md for material changes, UPSTREAM-PROVENANCE.json for source hashes, and LICENSING.md for the custom upstream terms and separate contribution/dependency licenses. The framework/implementation lineage does not replace original-author attribution.
