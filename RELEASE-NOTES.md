@@ -1,9 +1,12 @@
-# Aletheia Agora 0.1.0
+# Aletheia Agora 0.1.1
 
-An independent Python personal knowledge library with a FastAPI backend and vanilla browser interface. No Electron or Node.js runtime is required.
+This patch fixes ordinary library inventory questions in the independent FastAPI application with its vanilla browser interface.
 
-Install Python 3.12+, create a virtual environment, then install the wheel with pip. Run aletheia-agora. The source distribution includes installation instructions and tests. Keyword search works offline immediately; generation needs a compatible GGUF or Chat Completions API. Qwen remains an optional default download. Semantic hybrid search is optional via the semantic extra.
+- "Do I have anything in the library?" and "Can you check if I have anything in the collection?" now use complete archive counts and real saved titles with source links.
+- Empty-library checks and conversational phrasing work without a generation model, including when typed into chat.
+- Questions about specific topics or dates remain document searches.
+- Regression tests cover empty/populated libraries, external Markdown additions and authenticated API requests.
 
-This initial edition includes archive inventory, cited search answers, document preparation, title editing and saved themes. Local inference, Qt and optional semantic library support depend on platform, hardware and selected model. Engine packages are pinned for Windows/Linux/macOS x64/ARM64; API mode requires no local engine.
+Requires Python 3.12+. Create a separate virtual environment, install `aletheia_agora-0.1.1-py3-none-any.whl` with pip, and run `aletheia-agora`. Existing users can install the wheel with `python -m pip install --upgrade ./aletheia_agora-0.1.1-py3-none-any.whl` in their application environment. Settings, models and Markdown remain in the existing profile. Keyword search works offline; local inference and optional semantic search retain their existing platform and hardware requirements. Qwen remains an optional default download; compatible GGUF and Chat Completions connections are supported.
 
-The release contains a Python wheel and source distribution; these are not standalone operating-system installers. See README.md for setup and data locations. AGPL-3.0-only; upstream history and attribution retained.
+The release includes a Python wheel, source distribution and SHA-256 checksums. Python is required; Electron and Node.js are not. See README.md for setup and data locations. AGPL-3.0-only; upstream history and attribution retained.

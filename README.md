@@ -6,6 +6,8 @@ Derived from [Aletheia 0.2.0](https://github.com/AeMecha/Aletheia/tree/v0.2.0), 
 
 ## Run
 
+Download the [0.1.1 wheel and source archive](https://github.com/AeMecha/Aletheia-Agora/releases/tag/v0.1.1), or install from this checkout as follows.
+
 Requires Python 3.12+ with SQLite FTS5. The browser interface works on Windows, Linux and macOS; the server can also run headlessly. From this repository:
 
 ```sh

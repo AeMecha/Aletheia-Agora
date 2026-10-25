@@ -37,7 +37,7 @@ def create_app(home: Path | None = None, *, token=None, service_factory=Service)
             await asyncio.gather(initialization, return_exceptions=True)
             await service.close()
 
-    app = FastAPI(title="Aletheia Agora", version="0.1.0", lifespan=lifespan, docs_url=None, redoc_url=None, openapi_url=None)
+    app = FastAPI(title="Aletheia Agora", version="0.1.1", lifespan=lifespan, docs_url=None, redoc_url=None, openapi_url=None)
     # The launcher needs the token to construct its local browser URL. It never
     # appears in HTML, API state, logs, or a query string sent to the server.
     app.state.access_token = access_token
