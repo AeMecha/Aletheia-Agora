@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1
+
+- Route ordinary library existence questions and collection/empty-library phrasing to complete archive counts and saved titles without a generation model.
+- Preserve topic and date filters as document searches.
+- Enable chat inventory requests before an AI connection is configured.
+- Add empty/populated library and authenticated HTTP regression checks.
+
 ## 0.1.0
 
 Initial independent Python edition derived from Aletheia 0.2.0.

@@ -16,6 +16,8 @@ jobs:
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
         with:
           python-version: '3.13'
+      - name: Verify the release tag matches the package version
+        run: python -c "import os, tomllib; from pathlib import Path; version = tomllib.loads(Path('pyproject.toml').read_text())['project']['version']; assert os.environ['GITHUB_REF_NAME'] == 'v' + version, 'Tag and package version differ'"
       - name: Install and test independent application
         run: |
           python -m pip install . build
