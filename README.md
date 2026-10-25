@@ -1,8 +1,10 @@
 # Aletheia Agora
 
+**Origins:** Aletheia Agora is an independently maintained derivative of **[Aletheia](https://github.com/AdeptTel1/Aletheia)** by **[Adeptus Telvannus (AdeptTel1)](https://github.com/AdeptTel1)**. The original Archivist/Librarian prompts and Binder workflow are credited to that project. Its covered material retains the [original custom license](LICENSES/LicenseRef-AdeptTel1-Aletheia.txt); this distribution is **not AGPL-only**. See [ATTRIBUTION.md](ATTRIBUTION.md) for material changes and [LICENSING.md](LICENSING.md) for license scope.
+
 Aletheia's personal knowledge library as a **FastAPI application with a vanilla HTML/CSS/JavaScript browser interface**. Agora is the meeting place for your archive. No Electron, Node.js, frontend framework or build step is required.
 
-Derived from [Aletheia 0.2.0](https://github.com/AeMecha/Aletheia/tree/v0.2.0), with its Git history and AGPL-3.0-only license retained. The independent native Qt sibling is Aletheia Athenaeum.
+Ported from [Aletheia Scriptorium’s 0.2.0 implementation](https://github.com/AeMecha/Aletheia-Scriptorium/tree/v0.2.0), retaining its Git history. This implementation lineage does not replace credit to the original AdeptTel1/Aletheia project or its custom license. The independent native Qt sibling is Aletheia Athenaeum.
 
 ## Run
 
